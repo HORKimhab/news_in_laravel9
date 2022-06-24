@@ -15,6 +15,10 @@ use Illuminate\Support\Str;
 */
 
 Route::get('/', function () {
+
+    // Throw Exception 
+    // https://laravel.com/docs/9.x/errors#reporting-exceptions
+    throw new \Exception("Something weng wrong, check code again...!");
     return view('welcome');
 
 
