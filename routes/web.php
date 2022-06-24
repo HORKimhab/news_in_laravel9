@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Str;
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +65,17 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/posts/{post}', 'show');
     Route::post('/posts', 'store');
 });
+
+// Method 1
+// without: scopeBindings()
+// URL: https://laravel.com/docs/9.x/releases#forced-scoping-of-route-bindings
+/* Route::get('/users/{user}/posts/{post:id}', function (User $user, Post $post) {
+    return $post;
+}); */
+
+
+// Method 2
+// with: scopeBindings()
+Route::get('/users/{user}/posts/{post}', function (User $user, Post $post) {
+    return $post;
+})->scopeBindings();
