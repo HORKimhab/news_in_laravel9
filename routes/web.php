@@ -18,7 +18,13 @@ Route::get('/', function () {
 
     // Throw Exception 
     // https://laravel.com/docs/9.x/errors#reporting-exceptions
-    throw new \Exception("Something weng wrong, check code again...!");
+    // throw new \Exception("Something weng wrong, check code again...!");
+
+    // Blade::render
+    // https://laravel.com/docs/9.x/blade#rendering-views-for-collections
+
+    return Blade::render('Hello, {{ $name }} @if (false) (Condition) @else HKimhab Laravel 9 with Condition. @endif', ['name' => 'Laravel9 Universe, ']);
+
     return view('welcome');
 
 
