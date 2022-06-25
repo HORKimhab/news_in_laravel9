@@ -72,3 +72,8 @@ php arrtisan make:model Post --all
 - seeder 
 - controller 
 - policy 
+
+
+## XDebug 
+
+URL: https://www.youtube.com/watch?v=J7XBPBP3hpA
