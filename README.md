@@ -73,7 +73,11 @@ php arrtisan make:model Post --all
 - controller 
 - policy 
 
-
 ## XDebug 
 
 URL: https://www.youtube.com/watch?v=J7XBPBP3hpA
+
+## Laravel Scout Database Engine
+
+- composer require laravel/scout
+- https://laracasts.com/series/whats-new-in-laravel-9/episodes/8

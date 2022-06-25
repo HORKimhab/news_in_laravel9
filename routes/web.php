@@ -25,9 +25,9 @@ Route::get('/', function () {
     // Blade::render
     // https://laravel.com/docs/9.x/blade#rendering-views-for-collections
 
-    return Blade::render('Hello, {{ $name }} @if (false) (Condition) @else HKimhab Laravel 9 with Condition. @endif', ['name' => 'Laravel9 Universe, ']);
+    // return Blade::render('Hello, {{ $name }} @if (false) (Condition) @else HKimhab Laravel 9 with Condition. @endif', ['name' => 'Laravel9 Universe, ']);
 
-    return view('welcome');
+    // return view('welcome');
 
 
     // Method 1
@@ -49,6 +49,8 @@ Route::get('/', function () {
 
     // return $htmlString;
     // return $string;
+
+    return Post::search('commodi')->get();
 })->name('home');
 
 Route::get('/backToHome', function () {
