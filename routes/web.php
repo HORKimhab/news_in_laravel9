@@ -50,7 +50,10 @@ Route::get('/', function () {
     // return $htmlString;
     // return $string;
 
-    return Post::search('commodi')->get();
+    // return Post::search('commodi')->get();
+    // $data = DB::table('posts')->get();
+    $data = Post::whereFullText('body', 'occaecati')->get();
+    return $data;
 })->name('home');
 
 Route::get('/backToHome', function () {

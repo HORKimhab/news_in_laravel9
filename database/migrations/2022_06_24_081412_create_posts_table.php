@@ -28,7 +28,8 @@ onDelete('cascade'); simply adds ON DELETE CASCADE rule to your database which s
             // URL: https://stackoverflow.com/a/65491787
             $table->foreignIdFor(\App\Models\User::class)->constrained()->onDelete('cascade'); // work 
             $table->string('title');
-            $table->text('body');
+            $table->text('body')->fulltext();
+            // fulltext(): https://laravel.com/docs/9.x/releases#full-text
             $table->timestamps();
         });
     }
